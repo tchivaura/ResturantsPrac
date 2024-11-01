@@ -12,6 +12,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./tchivaura/ResturantsPrac/blob/master/Restaurants.API.csproj
     steps:
       - name: Checkout
         uses: actions/checkout@v4.2.2
