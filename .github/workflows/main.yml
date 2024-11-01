@@ -25,7 +25,7 @@ jobs:
         run: dotnet restore ../ResturantsPrac/Restaurants.API.csproj
 
       - name: Build
-        run: dotnet build --no-restore ../
+        run: dotnet build --no-restore ../ResturantsPrac/Restaurants.API.csproj
 
       - name: Test
-        run: dotnet test ../
+        run: dotnet test ../ResturantsPrac/Restaurants.API.csproj
