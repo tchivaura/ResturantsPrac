@@ -22,10 +22,10 @@ jobs:
           dotnet-version: 8.0.x
 
       - name: Restore dependencies
-        run: dotnet restore ./tchivaura/ResturantsPrac
+        run: dotnet restore ../
 
       - name: Build
-        run: dotnet build --no-restore ./tchivaura/ResturantsPrac
+        run: dotnet build --no-restore ../
 
       - name: Test
-        run: dotnet test ./tchivaura/ResturantsPrac
+        run: dotnet test ../
