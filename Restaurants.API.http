@@ -1,0 +1,96 @@
+@Restaurants.API_HostAddress = http://localhost:5049
+@token=CfDJ8DseCJ4RTS9GvHCkQaqQOspLLpc3r3cU5Cj3EQ-1jQZB3iokEIYJOE1jZSRDxQPn2dJ-dsQukCFWwnDYUJnMsBLZWmDanz4LJ3eMcBmscyrChsTc8xtWTsnEQVpllMAA1a0TtBadf1fPrsqJFX4VJpC3_mU8ADFxmHORm2btI-20pwUA-PJyCUyXhnW9nAsil4ZRc5FcvbH5ckYLAKXzGjP8K4_9WIJZpNynbQAMFVJDpefJdhL5dyEv0pDmoaIEOm0aLnNrvFRbzxRkrPX9Mj2aTeNblmiQRCTWeCfh_qznbwbM0b34SbrvNAURuH2kxmEEYQVFBTeF1f6k0h3IgcGSHxxrqZkXYLiVPKXSCpHZnR-g-taKJPYJVow1H51tShWo6ApV287CIWZeMcs9RwlAlZWD3ztK-Xbh0GvJwwV36ZwEPBrutG3WP9kObYDfzYsjZ7pIJk5z-6Koz3nEUcm08VH1Qmbsc5HWhmgodq4ftL0lcAtqIpSSpEy4OatM9KLelavp6lUMq8kyOutQWWV2mwkRBLDe2KGFrtqM-9mVaxWzl4JD-LL2zrEoHbFqzj_06rfbATav56rHGJ4wNM8DsdKSEv_wiOJlyqqS_jBQgv8H8vBhzYMYb3KRzjBKg-busOwmE6suQN9Zij07GYs9ZX9nAEeW4ASPhMcsv5aFaDDGdiV91PmMdGJzMg9viuzweZ8Oymg_FHBpwV3H0PBq9fJ-D-3Bjnn7F_s9Ti-crYb0tkQ-Ljc1vsRb6OzT_G1gvGzyzveNWvteRLPJZ0uK3QvTZ4OiKp07B3kAMMKdMhQeT1xLhKN5dpwz_3l0b5_Uju61BJCRpsFipLKCyJh94k5csJks23n4Zkkd9CoV9PlIChxnVQCJgWA_0SpdzRvXWFb1QyM7tb_A9a2ZigY
+GET {{Restaurants.API_HostAddress}}/api/resturants?searchPhrase=Mubasa&pageSize=5&pageNumber=2&sortBy=Name
+
+Accept: application/json
+
+
+###
+GET {{Restaurants.API_HostAddress}}/api/resturants/8
+
+Accept: application/json
+Authorization: Bearer {{token}}
+
+
+###
+
+
+POST {{Restaurants.API_HostAddress}}/api/resturants
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  
+  "name": "Mancin",
+  "description": "Sea Food",
+  "category": "SeaFood",
+  "hasDelivery": true,
+  "city": "Harare",
+  "street": "Lavenham",
+  "postalCode": "000",
+  
+  "Dish":[]
+}
+
+
+###
+DELETE {{Restaurants.API_HostAddress}}/api/resturants/2
+Accept: application/json
+Authorization: Bearer {{token}}
+
+###
+PATCH  {{Restaurants.API_HostAddress}}/api/resturants/3
+Content-Type: application/json
+Authorization: Bearer {{token}}
+{
+  
+  "name": "Gava",
+  "description": "Traditional",
+  "category": "SeaFood",
+  "hasDelivery": true
+  
+}
+
+
+###
+POST {{Restaurants.API_HostAddress}}/api/restaurant/4/dishes
+Content-Type: application/json
+
+{
+  
+ "name": "Hot Pot",
+  "description": "rice",
+  "price":4
+  
+}
+
+###
+
+GET {{Restaurants.API_HostAddress}}/api/restaurant/4/dishes/1
+Accept: application/json
+Authorization: Bearer {{token}}
+###
+GET {{Restaurants.API_HostAddress}}/api/restaurant/4/dishes
+Accept: application/json
+
+###
+DELETE  {{Restaurants.API_HostAddress}}/api/restaurant/4/dishes
+Accept: application/json
+Authorization: Bearer {{token}}
+###
+POST {{Restaurants.API_HostAddress}}/api/identity/register
+Content-Type: application/json
+
+{
+  "email": "test@gmail.com",
+  "password": "224490@Hi"
+}
+
+###
+POST {{Restaurants.API_HostAddress}}/api/identity/login
+Content-Type: application/json
+
+{
+  "email": "tnasshechivaurah@gmail.com",
+  "password": "224490@Hi"
+}
