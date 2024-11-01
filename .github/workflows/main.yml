@@ -12,9 +12,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: 
     steps:
       - name: Checkout
         uses: actions/checkout@v4.2.2
@@ -25,10 +22,10 @@ jobs:
           dotnet-version: 8.0.x
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore ./tchivaura/ResturantsPrac
 
       - name: Build
-        run: dotnet build --no-restore
+        run: dotnet build --no-restore ./tchivaura/ResturantsPrac
 
       - name: Test
-        run: dotnet test
+        run: dotnet test ./tchivaura/ResturantsPrac
